@@ -1,1 +1,0 @@
-# AramidSim_DCA
