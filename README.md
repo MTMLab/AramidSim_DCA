@@ -56,7 +56,7 @@ This project was developed and tested in the following environment:
 - **LAMMPS**: lammps-2Aug2023 (https://www.lammps.org)
 - **Moltemplate**: 2.19.12 (https://www.moltemplate.org)
 - **AmberTools**: 24.8 (https://ambermd.org)
-- **Conda environment**: `Aramid` (with RDKit, numpy, pandas, matplotlib, scipy, etc.)  
+- **Conda environment**: `Aramid_Interface` (with RDKit, numpy, pandas, matplotlib, scipy, etc.)  
 
 ### Installation (Recommended)
 ```bash
