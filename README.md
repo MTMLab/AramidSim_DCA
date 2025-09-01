@@ -53,9 +53,9 @@ The polymer chain structure consists of **8 monomer units**:
 This project was developed and tested in the following environment:
 
 - **Python**: 3.12.7  
-- **LAMMPS**: lammps-2Aug2023  
-- **Moltemplate**: 2.19.12  
-- **AmberTools**: 24.8 (optional preprocessing)  
+- **LAMMPS**: lammps-2Aug2023 (https://www.lammps.org)
+- **Moltemplate**: 2.19.12 (https://www.moltemplate.org)
+- **AmberTools**: 24.8 (https://ambermd.org)
 - **Conda environment**: `Aramid` (with RDKit, numpy, pandas, matplotlib, scipy, etc.)  
 
 ### Installation (Recommended)
