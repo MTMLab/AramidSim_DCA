@@ -23,15 +23,13 @@ def read_last_y(filename: str, missing_label: str) -> float:
         except StopIteration:
             break
         try:
-            x = float(a)  # kept for parity with C++ but unused
+            x = float(a)
             y = float(b)
         except ValueError:
             # Emulate stream extraction failure (stop reading pairs)
             break
         pairs.append((x, y))
 
-    # In the original C++, if there are no valid pairs this would lead to
-    # undefined indexing. Here we raise a clear error to avoid silent failure.
     if not pairs:
         raise RuntimeError(f"{missing_label}: no numeric (x, y) pairs after header")
 
@@ -39,7 +37,6 @@ def read_last_y(filename: str, missing_label: str) -> float:
 
 
 def fmt(v: float) -> str:
-    # Mimic default C++ iostream "general" with precision ~6
     return f"{v:.6g}"
 
 
