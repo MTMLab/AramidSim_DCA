@@ -78,7 +78,6 @@ class MOL2Processor:
                         self.coordinates.append([atom_info['x'], atom_info['y'], atom_info['z']])
                         self.charges.append(atom_info['charge'])
                         
-                        # Use the second string (element type, not atom name) as in C++ code
                         # In MOL2, parts[5] is the element type
                         element_type = self.identify_element(parts[5])
                         self.elements.append(element_type)
@@ -106,7 +105,6 @@ class MOL2Processor:
         # Extract the element symbol before the dot (.)
         base_element = atom_type.split('.')[0]
         
-        # C++ order: N -> CL -> O -> H -> C -> others(10)
         if base_element.startswith('N'):
             return self.aN
         elif base_element.startswith('CL') or base_element.startswith('Cl'):
@@ -176,11 +174,9 @@ class MOL2Processor:
                     break
 
     def redistribute_charges(self) -> None:
-        """Redistribute charges of atoms to be removed to remaining hydrogens (same logic as C++ code)"""
         if not self.ad0_del or not self.ad0_cl_del:
             return
         
-        # C++ code: Calculate total charge of atoms excluding those to be removed
         sum_q = 0.0
         for j in range(self.na):
             if j == self.ad0_del[0] or j == self.ad0_cl_del[0]:
