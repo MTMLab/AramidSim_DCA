@@ -43,7 +43,9 @@ The polymer chain structure consists of **8 monomer units**:
     ├── Stretched/                          # Stretched-state simulations
     ├── Solution/                           # Solution-state simulations
     ├── Result_plot/                        # Auto-generated figures
-    └── set/                                # Stores polymer configuration & installation files
+    ├── set/                                # Stores polymer configuration & installation files
+    ├── Cheminformatics_screening/          # Cheminformatics Screening
+    └── TS_simulation_python/               # Tensile Strength Simulation
 ```
 
 ---
