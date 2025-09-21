@@ -1,0 +1,5 @@
+    # Default styles and settings for AMBER based force-fields:
+  #  units           real
+  #  atom_style      full
+    pair_style reaxff NULL
+    pair_coeff * * ffield_CHON2017_mod_F.reax C H N O S P Cl F
